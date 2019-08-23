@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<h1>chương trình máy tính </h1>
+<table  width="15px">
+    <tr><input type="text" id="select1">
+    <!-- id cua the input khac vs id cua the div , vì vậy để gọi đến 1 ô input type text ta phỉ gọi đến id của thẻ input
+         cách debug là từng bước 1 , ví dụ dùng hàm elert()-->
+       <input type="text "  id="select2">
+    </tr>
+</table>
+<div id="select">
+    <input type="button"   value="addition"    onclick="addition() "  id="addition">
+    <input type = "button" value="subtraction" onclick="subtraction()"   id="subtraction">
+    <input type = "button" value ="division"   onclick ="division() "    id ="division">
+    <input  type ="button" value ="multipline" onclick=" multipline() "  id ="multipline">
+    <div id="result"> </div>
+</div>
+<script>
+    function addition(){
+        let select1= parseInt(document.getElementById("select1").value);
+        let select2= parseInt(document.getElementById("select2").value);
+        let select3 =parseInt(select1)+ parseInt(select2);
+        // let addition1= document.getElementById("addition");
+        // addition1.innerHTML= select3;
+        document.getElementById("result").innerHTML="result: " +  select3;
+    }
+    function subtraction(){
+        let select1= parseInt(document.getElementById("select1").value);
+        let select2= parseInt(document.getElementById("select2").value);
+
+        let select3 =parseInt(select1)- parseInt(select2);
+        document.getElementById("result").innerHTML="result: " +  select3;
+    }
+    function multipline(){
+        let select1= parseInt(document.getElementById("select1").value);
+        let select2= parseInt(document.getElementById("select2").value);
+
+        let select3 =parseInt(select1)* parseInt(select2);
+        document.getElementById("result").innerHTML="result: " +  select3;
+    }
+    function division(){
+        let select1= parseInt(document.getElementById("select1").value);
+        let select2= parseInt(document.getElementById("select2").value);
+        let select3;
+        if (select2 != 0)
+            select3 =parseInt(select1) / parseInt(select2);
+        else
+            alert("vui long nhap lai so khac 0!")
+        document.getElementById("result").innerHTML="result: " +  select3;
+    }
+</script>
+</body>
+</html>
